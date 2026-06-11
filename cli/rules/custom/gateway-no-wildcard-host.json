@@ -1,0 +1,10 @@
+{
+  "name": "gateway-no-wildcard-host",
+  "templateId": "field-pattern",
+  "params": { "notMatch": "^\\*$" },
+  "description": "Gateway servers must not expose a wildcard host ('*').",
+  "message": "{{description}} (at {{path}})",
+  "given": "$.spec.servers[*].hosts[*]",
+  "severity": "error",
+  "then": { "function": "pattern", "functionOptions": { "notMatch": "^\\*$" } }
+}

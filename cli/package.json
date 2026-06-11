@@ -1,0 +1,36 @@
+{
+  "name": "tetrate-lint",
+  "version": "1.0.1",
+  "description": "Spectral-based linter for Tetrate service-mesh & API configs (Istio/Envoy/Kubernetes YAML + OpenAPI), with organization-specific custom rules bundled in. Rules are authored via Tetrate Lint Studio and ship inside this CLI.",
+  "bin": {
+    "tetrate-lint": "./bin.js"
+  },
+  "files": [
+    "bin.js",
+    "lib/",
+    "rules/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "list": "node bin.js --list",
+    "pack:dist": "npm pack"
+  },
+  "keywords": [
+    "spectral",
+    "lint",
+    "tetrate",
+    "istio",
+    "envoy",
+    "openapi",
+    "api-governance"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@stoplight/spectral-cli": "^6.14.2",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}

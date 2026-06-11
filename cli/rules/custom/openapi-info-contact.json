@@ -1,0 +1,10 @@
+{
+  "name": "openapi-info-contact",
+  "templateId": "field-truthy",
+  "params": { "field": "contact" },
+  "description": "OpenAPI documents should declare an info.contact so consumers know who owns the API.",
+  "message": "{{description}} (at {{path}})",
+  "given": "$.info",
+  "severity": "warn",
+  "then": { "field": "contact", "function": "truthy" }
+}

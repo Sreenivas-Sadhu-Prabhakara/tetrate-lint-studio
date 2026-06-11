@@ -1,0 +1,19 @@
+{
+  "name": "tetrate-lint-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Author Spectral lint rules for Tetrate service-mesh & API configs in a UI, and bundle them into a downloadable CLI (npm + Docker).",
+  "scripts": {
+    "setup": "npm --prefix cli install && npm --prefix server install && npm --prefix ui install",
+    "build:ui": "npm --prefix ui run build",
+    "dev:server": "npm --prefix server run dev",
+    "dev:ui": "npm --prefix ui run dev",
+    "start": "npm run build:ui && npm --prefix server start",
+    "cli": "node cli/bin.js",
+    "pack:cli": "cd cli && npm pack --pack-destination ../dist",
+    "docker:build": "docker build -t tetrate-lint ."
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}

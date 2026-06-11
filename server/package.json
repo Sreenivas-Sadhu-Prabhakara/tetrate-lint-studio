@@ -1,0 +1,18 @@
+{
+  "name": "tetrate-lint-studio-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend API for Tetrate Lint Studio — authors Spectral rules into the CLI and packs it for download.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}

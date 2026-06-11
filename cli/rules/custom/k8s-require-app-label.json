@@ -1,0 +1,10 @@
+{
+  "name": "k8s-require-app-label",
+  "templateId": "field-truthy",
+  "params": { "field": "app" },
+  "description": "Kubernetes/Istio resources should carry an 'app' label for ownership and routing.",
+  "message": "{{description}} (at {{path}})",
+  "given": "$.metadata.labels",
+  "severity": "warn",
+  "then": { "field": "app", "function": "truthy" }
+}

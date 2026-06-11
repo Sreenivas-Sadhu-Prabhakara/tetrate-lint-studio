@@ -1,0 +1,10 @@
+{
+  "name": "istio-http-route-timeout",
+  "templateId": "field-truthy",
+  "params": { "field": "timeout" },
+  "description": "Istio VirtualService HTTP routes should set an explicit timeout.",
+  "message": "{{description}} (at {{path}})",
+  "given": "$.spec.http[*]",
+  "severity": "warn",
+  "then": { "field": "timeout", "function": "truthy" }
+}
